@@ -7,18 +7,35 @@ const connection = require('../database/Database');
 const modelCategoria = connection.define(
     'tbl_categoria',
     {
-        cod_categoria:{
+        cod_Animal:{
             type: Sequelize.INTEGER,
             primarykey: true,
             //autoIncrement: true
         },
-        nome_categoria:{
+        nome_Animal:{
             type: Sequelize.STRING(100),
             allowNull: false 
+        },
+        identificacao_animal:{
+            type: Sequelize.STRING(50),
+            allowNull: false
+        },
+        sexo_animal:{
+            type: Sequelize.STRING(1),
+            allowNull:false
+        },
+        cor_animal:{
+            type: Sequelize.STRING(50),
+            allowNull:false
+        },
+        dataNasc_animal:{
+            type: Sequelize.DATE(4),
+            allowNull:false
         }
+
     }
 );
 
-// modelCategoria.sync({force:true});
+//modelCategoria.sync({force:true});
 
 module.exports = modelCategoria;

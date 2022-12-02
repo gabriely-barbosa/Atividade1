@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const connection = new Sequelize(
-    'atividade1',
+    'zoologico',
     'root',
     '',
     {

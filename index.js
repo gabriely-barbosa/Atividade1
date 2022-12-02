@@ -4,6 +4,8 @@ const express = require('express');
 //Torna o EXPRESS executável dentro do index.js através da const app
 const app = express();
 
+app.use(express.json());
+
 const routesCategoria = require('./route/Route');
 
 app.use('/', routesCategoria);
